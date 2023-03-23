@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 
+
 {% block content %}
 <div class="align-center col-8 offset-2">
     <p class="lead mb-3 ml-0">Register</p>
@@ -11,7 +12,7 @@
         <div class="form-group mb-3">
             <label>{{ form.username.label_tag }}</label>
             {{ form.username.errors }}
-            {% render_field form.username class="form-control" hx-post="/check_username/" hx-trigger="keyup" hx-swap="outerhtml " hx-target="#username-error" %}
+            {% render_field form.username class="form-control" hx-post="/check_username/" hx-trigger="keyup changed" hx-swap="outerhtml " hx-target="#username-error" %}
             <div id="username-error"></div>
 
             <label>{{ form.password1.label_tag }}</label>
