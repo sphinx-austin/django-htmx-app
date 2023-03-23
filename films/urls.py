@@ -13,7 +13,8 @@ urlpatterns = [
 
 hxmx_urlpatterns = [
     path('check_username/', views.check_username, name='check-username'),
-    path('add-film/', views.add_film, name='add-film')
+    path('add-film/', views.add_film, name='add-film'),
+    path('delete-film/<int:pk>/', views.delete_film, name='delete-film'),
 ]
 
 urlpatterns += hxmx_urlpatterns
